@@ -10,12 +10,13 @@ public class Encoder {
 		
 	}
 	
+	//writes an encoded version of plaintext to this encoder's file
 	public void write(String plaintext)
 	{
 		
 	}
 	
-	//returns a list of encoded
+	//returns a list of encoded strings of text contained in this encoder's file
 	public List<String> read()
 	{
 		return null;
