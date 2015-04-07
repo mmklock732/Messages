@@ -1,13 +1,13 @@
 
 
 import java.awt.Dimension;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 	import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
 
@@ -19,7 +19,7 @@ import javax.swing.SwingUtilities;
 		private JTextField myTextField;
 
 		private JTextField myTextField0;
-		
+		private JTextArea myText;
 		
 		
 		private JButton myButton1;
@@ -34,6 +34,7 @@ import javax.swing.SwingUtilities;
 			myFrame.setMaximumSize(new Dimension (1000, 1000));
 			myFrame.setPreferredSize(new Dimension(750, 500));
 			
+			myText = new JTextArea();
 			myTextField = new JTextField();
 			myTextField1 = new JTextField();
 			myTextField0 = new JTextField();
@@ -50,7 +51,9 @@ import javax.swing.SwingUtilities;
 			myBox.add(myTextField0);
 			myBox.add(myButton);
 			myBox1.add(myTextField1);
+		
 			myBox1.add(myButton1);
+			myBox1.add(myText);
 			
 			myButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
