@@ -52,4 +52,20 @@ public class BackEnd {
 		
 		return users;
 	}
+	
+	public String getMessage2(String username)
+	{
+		String a = "";
+		for(int i = 0; i < myStorage.size(); i ++)
+		{
+			if(myStorage.get(i).get(0).equalsIgnoreCase(username))
+			{
+				for(String s : myStorage.get(i))
+					a = a + "\n" + s;
+			return a;
+			}
+		}
+		
+		return "No Messages.";
+	}
 }

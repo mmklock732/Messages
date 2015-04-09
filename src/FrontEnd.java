@@ -40,7 +40,7 @@ import javax.swing.SwingUtilities;
 			myTextField1 = new JTextField();
 			myTextField0 = new JTextField();
 			myButton = new JButton("Add new message.");
-			myButton1 = new JButton("Username");
+			myButton1 = new JButton("User History");
 			Box myBox = Box.createVerticalBox();
 			Box myBox1 = Box.createVerticalBox();
 			Box myBigBox = Box.createHorizontalBox();
@@ -70,7 +70,8 @@ import javax.swing.SwingUtilities;
 			{
 				public void actionPerformed(ActionEvent e)
 				{
-					myText.setText(myBackEnd.getMessage(myTextField1.getText()).toString());
+					String s =myBackEnd.getMessage2(myTextField1.getText());
+					myText.setText(s);
 				}
 			});
 			
