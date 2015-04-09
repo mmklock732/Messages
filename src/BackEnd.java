@@ -4,15 +4,19 @@ import java.util.List;
 
 public class BackEnd {
 
-	public List<List<String>> myStorage;
+	private List<List<String>> myStorage;
 	
+	public BackEnd()
+	{
+		myStorage = new ArrayList<List<String>>();
+	}
 	//returns a list of all plaintext messages submitted by a user
 	public List<String> getMessage(String username)
 	{
-		for(List<String> s : myStorage)
+		for(int i = 0; i < myStorage.size(); i ++)
 		{
-			if(s.get(0).equalsIgnoreCase(username))
-				return s;
+			if(myStorage.get(i).get(0).equalsIgnoreCase(username))
+				return myStorage.get(i);
 		}
 		
 		return null;
@@ -21,10 +25,10 @@ public class BackEnd {
 	//adds message to the encoded file, associated with username
 	public void addMessage(String username, String message)
 	{
-		for(List<String> s: myStorage)
+		for(int i = 0; i < myStorage.size(); i ++)
 		{
-			if(s.get(0).equalsIgnoreCase(username))
-				s.add(message);
+			if(myStorage.get(i).get(0).equalsIgnoreCase(username))
+				myStorage.get(i).add(message);
 			else
 			{
 			List<String> newString = new ArrayList<String>();
